@@ -36,6 +36,9 @@
     "nock": "^7.0.2"
   },
   "dependencies": {
-    "aries-data": "aries-data/aries-data"
+    "aries-data": "aries-data/aries-data",
+    "fs": "0.0.1-security",
+    "highland": "^2.10.1",
+    "through2-map": "^3.0.0"
   }
 }
