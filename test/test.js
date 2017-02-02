@@ -8,7 +8,7 @@ describe('SurveygizmoTransform', function() {
 
   it('', function(done) {
       const transform = new SurveygizmoTransform();
-      transform.getResponses(response);
+      transform.getResponses(JSON.stringify(response));
       done();
   });
 });
