@@ -6,9 +6,9 @@ import SurveygizmoTransform from '../lib/index.js';
 
 describe('SurveygizmoTransform', function() {
 
-  it('', function(done) {
+  it('should contain same amount of incoming surveys', function() {
       const transform = new SurveygizmoTransform();
-      transform.getResponses(JSON.stringify(response));
-      done();
+      const allData = transform.getResponses(response);
+      assert.equal(allData.length, response.data.length);
   });
 });
