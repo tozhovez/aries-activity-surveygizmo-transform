@@ -1,14 +1,25 @@
 import { assert } from 'chai';
 import _ from 'highland';
 import fs from 'fs';
-import response from '../test/fixtures/test-data.json';
-import SurveygizmoTransform from '../lib/index.js';
 import config from '../test/test-config.js';
+import transformSurveyQuestion from '../lib/transforms/transformSurveyQuestion.js';
+import transformSurveyResponse from '../lib/transforms/transformSurveyResponse.js';
+
+const surveyResponsePath = 'test/fixtures/test-data.json';
+const surveyQuestionPath = 'test/fixtures/survey-question.json';
+
 describe('SurveygizmoTransform', function() {
 
-  it('should contain same amount of incoming surveys', function() {
-      const transform = new SurveygizmoTransform();
-      const allData = transform.getResponses(response, config);
-      assert.equal(allData.length, response.data.length);
-  });
+    let inStream;
+
+    beforeEach(function(done) {
+        inStream = _(fs.createReadStream(surveyQuestionPath)).split().map(JSON.parse).errors(err => {});
+        done();
+    });
+
+    it('should transform survey question responses', (done) => {
+        const allData = transformSurveyQuestion(inStream, config);
+        allData.on('data', (chunk) => {});
+        allData.on('end', done);
+    });
 });
