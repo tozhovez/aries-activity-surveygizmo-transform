@@ -18,9 +18,9 @@ describe('SurveygizmoTransform', function() {
     });
 
     it('should transform survey question responses', (done) => {
-        const allData = transformSurveyResponse(inStream, config);
+        const allData = transformSurveyQuestion(inStream, config);
         allData.on('data', (chunk) => {
-            console.log(chunk)
+        //    console.log(chunk)
         });
         allData.on('end', done);
     });
