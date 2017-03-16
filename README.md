@@ -6,7 +6,7 @@ The following is an example configuration:
 ```
 "config" : {
         "option" : "surveydata",
-        "method" : "transformSurveyResponse"\
+        "method" : "transformSurveyResponse"
         }
 ```
 ## Methods
