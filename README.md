@@ -68,6 +68,7 @@ This method  will transform the following response.
 
 ### `transformSurveyQuestion`
 #### Response
+This method will transform the following response.
 ```
 {
   "result_ok": true,
@@ -142,91 +143,10 @@ This method  will transform the following response.
           }
         }
       ]
-    },
-    {
-      "id": 5,
-      "base_type": "Question",
-      "type": "RADIO",
-      "title": {
-        "English": "What is your overall opinion of the Crest 3D Whitestrips Express you tried in your Beyond the Rack order that you received?"
-      },
-      "shortname": "",
-      "varname": [
-        ""
-      ],
-      "description": [],
-      "has_showhide_deps": false,
-      "comment": false,
-      "properties": {
-        "option_sort": false,
-        "required": true,
-        "hidden": false,
-        "orientation": "VERT",
-        "labels_right": true,
-        "map_key": "radio",
-        "show_title": false,
-        "question_description": {
-          "English": ""
-        },
-        "question_description_above": false,
-        "disabled": false,
-        "messages": {
-          "inputmask": [],
-          "r_extreme_label": [],
-          "l_extreme_label": [],
-          "center_label": [],
-          "right_label": [],
-          "left_label": []
-        },
-        "hide_after_response": false,
-        "custom_css": "",
-        "break_after": false,
-        "url": "http://",
-        "soft-required": false
-      },
-      "options": [
-        {
-          "id": 10012,
-          "title": {
-            "English": "I liked it very much"
-          },
-          "value": "I liked it very much",
-          "properties": {
-            "disabled": false
-          }
-        },
-        {
-          "id": 10013,
-          "title": {
-            "English": "I liked it somewhat"
-          },
-          "value": "I liked it somewhat",
-          "properties": {
-            "disabled": false
-          }
-        },
-        {
-          "id": 10075,
-          "title": {
-            "English": "I did not like it very much, but I would consider trying other products from Crest"
-          },
-          "value": "I did not like it very much, but I would consider trying other products from Crest",
-          "properties": {
-            "disabled": false
-          }
-        },
-        {
-          "id": 10076,
-          "title": {
-            "English": "I did not like it at all"
-          },
-          "value": "I did not like it at all",
-          "properties": {
-            "disabled": false
-          }
-        }
-      ]
     }
   ]
 }
 ```
+#### Method Options
+`questions` - This option will transform the response by stripping the data of only question information.
+`answers` - This option will transform the response by stripping the data of only possible answer values.
