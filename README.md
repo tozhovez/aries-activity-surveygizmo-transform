@@ -65,3 +65,168 @@ This method  will transform the following response.
 `responses` - This option will transform the response into an array of survey responses which are located in the `survey_data` array.
 
 `metadata` - This option will transform the response by dropping all survey data and returning only the remaining properties of the objects contained in the `data` array.
+
+### `transformSurveyQuestion`
+#### Response
+```
+{
+  "result_ok": true,
+  "total_count": 17,
+  "page": 1,
+  "total_pages": 1,
+  "results_per_page": 17,
+  "data": [
+    {
+      "id": 2,
+      "base_type": "Question",
+      "type": "RADIO",
+      "title": {
+        "English": "Have you tried the Crest 3D Whitestrips Express product in your Beyond the Rack order? (select one)"
+      },
+      "shortname": "",
+      "varname": [
+        ""
+      ],
+      "description": [],
+      "has_showhide_deps": true,
+      "comment": false,
+      "properties": {
+        "option_sort": false,
+        "required": true,
+        "hidden": false,
+        "orientation": "VERT",
+        "labels_right": true,
+        "map_key": "radio",
+        "show_title": false,
+        "question_description": {
+          "English": ""
+        },
+        "question_description_above": false,
+        "soft-required": false,
+        "disabled": false,
+        "messages": {
+          "inputmask": [],
+          "r_extreme_label": [],
+          "l_extreme_label": [],
+          "center_label": [],
+          "right_label": [],
+          "left_label": []
+        },
+        "hide_after_response": false,
+        "custom_css": "",
+        "break_after": false,
+        "url": "http://"
+      },
+      "options": [
+        {
+          "id": 10001,
+          "title": {
+            "English": "Yes"
+          },
+          "value": "Yes",
+          "properties": {
+            "disabled": false
+          }
+        },
+        {
+          "id": 10002,
+          "title": {
+            "English": "No"
+          },
+          "value": "No",
+          "properties": {
+            "disabled": false,
+            "show_rules": null,
+            "show_rules_logic_map": ":51eea6ed9ce60,51eea6ed9d24a,51eea6ed9d24a",
+            "dependent": "4"
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "base_type": "Question",
+      "type": "RADIO",
+      "title": {
+        "English": "What is your overall opinion of the Crest 3D Whitestrips Express you tried in your Beyond the Rack order that you received?"
+      },
+      "shortname": "",
+      "varname": [
+        ""
+      ],
+      "description": [],
+      "has_showhide_deps": false,
+      "comment": false,
+      "properties": {
+        "option_sort": false,
+        "required": true,
+        "hidden": false,
+        "orientation": "VERT",
+        "labels_right": true,
+        "map_key": "radio",
+        "show_title": false,
+        "question_description": {
+          "English": ""
+        },
+        "question_description_above": false,
+        "disabled": false,
+        "messages": {
+          "inputmask": [],
+          "r_extreme_label": [],
+          "l_extreme_label": [],
+          "center_label": [],
+          "right_label": [],
+          "left_label": []
+        },
+        "hide_after_response": false,
+        "custom_css": "",
+        "break_after": false,
+        "url": "http://",
+        "soft-required": false
+      },
+      "options": [
+        {
+          "id": 10012,
+          "title": {
+            "English": "I liked it very much"
+          },
+          "value": "I liked it very much",
+          "properties": {
+            "disabled": false
+          }
+        },
+        {
+          "id": 10013,
+          "title": {
+            "English": "I liked it somewhat"
+          },
+          "value": "I liked it somewhat",
+          "properties": {
+            "disabled": false
+          }
+        },
+        {
+          "id": 10075,
+          "title": {
+            "English": "I did not like it very much, but I would consider trying other products from Crest"
+          },
+          "value": "I did not like it very much, but I would consider trying other products from Crest",
+          "properties": {
+            "disabled": false
+          }
+        },
+        {
+          "id": 10076,
+          "title": {
+            "English": "I did not like it at all"
+          },
+          "value": "I did not like it at all",
+          "properties": {
+            "disabled": false
+          }
+        }
+      ]
+    }
+  ]
+}
+```
