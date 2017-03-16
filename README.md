@@ -1,5 +1,6 @@
 #Response
-`{
+```
+{
   "result_ok": true,
   "total_count": "8",
   "page": 1,
@@ -70,4 +71,5 @@
       }
     }
   ]
-}`
+}
+```
