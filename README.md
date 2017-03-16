@@ -1,4 +1,10 @@
-# Response
+# Configuration
+There are two configuration properties for this activity: `method` and `option`. Each method has an option that
+tells the activity how to manipulate the data that is passed into it.
+## Methods
+**`transformSurveyResponse`**
+### Response
+This activity will transform the following response.
 ```
 {
   "result_ok": true,
