@@ -1,6 +1,14 @@
 # Configuration
 There are two configuration properties for this activity: `method` and `option`. Each method has an option that
 tells the activity how to manipulate the data that is passed into it.
+
+The following is an example configuration:
+```
+"config" : {
+                "option" : "surveydata",
+                "method" : "transformSurveyResponse"\
+            }
+```
 ## Methods
 ### `transformSurveyResponse`
 #### Response
