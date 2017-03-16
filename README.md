@@ -55,27 +55,13 @@ This method  will transform the following response.
           "question": "Why have you not tried the Crest 3D Whitestrips Express? (Select one)",
           "section_id": 1,
           "shown": false
-        },
-        "5": {
-          "id": 5,
-          "type": "RADIO",
-          "question": "What is your overall opinion of the Crest 3D Whitestrips Express you tried in your Beyond the Rack order that you received?",
-          "section_id": 1,
-          "answer": "I liked it somewhat",
-          "answer_id": 10013,
-          "shown": true
-        },
-        "7": {
-          "id": 7,
-          "type": "RADIO",
-          "question": "After trying the Crest 3D Whitestrips Express in in your Beyond the Rack order, did you purchase one or more packs of Crest 3D Whitestrips Express?",
-          "section_id": 3,
-          "answer": "No",
-          "answer_id": 10029,
-          "shown": true
         }
       }
     }
   ]
 }
 ```
+#### Method Options
+`responses` - This option will transform the response into an array of survey responses which are located in the `survey_data` array.
+
+`metadata` - This option will transform the response by dropping all survey data and returning only the remaining properties of the objects contained in the `data` array.
