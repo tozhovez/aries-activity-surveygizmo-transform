@@ -149,4 +149,5 @@ This method will transform the following response.
 ```
 #### Method Options
 `questions` - This option will transform the response by stripping the data of only question information.
+
 `answers` - This option will transform the response by stripping the data of only possible answer values.
