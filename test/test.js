@@ -20,7 +20,7 @@ describe('SurveygizmoTransform', function() {
     it('should transform survey question responses', (done) => {
         const allData = transformSurveyResponse(inStream, config);
         allData.on('data', (chunk) => {
-        //    console.log(chunk)
+
         });
         allData.on('end', done);
     });
