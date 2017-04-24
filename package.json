@@ -36,7 +36,7 @@
     "nock": "^7.0.2"
   },
   "dependencies": {
-    "aries-data": "aries-data/aries-data",
+    "aries-data": "^2.1.1",
     "fs": "0.0.1-security",
     "highland": "^2.10.1",
     "lodash.get": "^4.4.2",
