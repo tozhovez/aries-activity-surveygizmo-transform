@@ -4,7 +4,7 @@ require('dotenv').config();
 
 const config = {
     headerType: "qid",
-    option: "responses"
+    option: "questions"
     }
 
 export default config;
