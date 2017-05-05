@@ -3,8 +3,7 @@
 require('dotenv').config();
 
 const config = {
-    headerType: "qid",
-    option: "questions"
+    option: "metadata"
     }
 
 export default config;

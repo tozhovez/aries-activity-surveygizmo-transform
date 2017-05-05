@@ -13,12 +13,12 @@ describe('SurveygizmoTransform', function() {
     let inStream;
 
     beforeEach(function(done) {
-        inStream = _(fs.createReadStream(surveyQuestionPath)).split().map(JSON.parse).errors(err => {});
+        inStream = _(fs.createReadStream(surveyResponsePath)).split().map(JSON.parse).errors(err => {});
         done();
     });
 
     it('should transform survey question responses', (done) => {
-        const allData = transformSurveyQuestion(inStream, config);
+        const allData = transformSurveyResponse(inStream, config);
         allData.on('data', (chunk) => {
 
         });
