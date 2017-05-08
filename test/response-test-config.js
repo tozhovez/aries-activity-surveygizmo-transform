@@ -4,7 +4,7 @@ require('dotenv').config();
 
 const config = {
     method: "transformSurveyResponse",
-    option: "metadata"
+    option: "responses"
 }
 
 export default config;

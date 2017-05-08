@@ -18,7 +18,7 @@ describe('transformSurveyQuestion', function() {
     it('should transform survey question responses', (done) => {
         const allData = transformSurveyQuestion(inStream, config);
         allData.on('data', (questions) => {
-
+            assert.equal(questions.length, 53, 'should have same number of questions');
         });
         allData.on('end', done);
     });
