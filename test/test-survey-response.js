@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 import _ from 'highland';
 import fs from 'fs';
-import config from '../test/test-config.js';
+import config from '../test/response-test-config.js';
 import transformSurveyResponse from '../lib/transforms/transformsurveyresponse.js';
 
 const surveyResponsePath = 'test/fixtures/test-data.json';

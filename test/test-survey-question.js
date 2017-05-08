@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 import _ from 'highland';
 import fs from 'fs';
-import config from '../test/test-config.js';
+import config from '../test/question-test-config.js';
 import transformSurveyQuestion from '../lib/transforms/transformsurveyquestion.js';
 
 const surveyQuestionPath = 'test/fixtures/survey-question.json';
@@ -17,7 +17,7 @@ describe('transformSurveyQuestion', function() {
 
     it('should transform survey question responses', (done) => {
         const allData = transformSurveyQuestion(inStream, config);
-        allData.on('data', (chunk) => {
+        allData.on('data', (questions) => {
 
         });
         allData.on('end', done);

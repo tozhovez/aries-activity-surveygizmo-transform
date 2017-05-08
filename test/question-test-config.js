@@ -3,7 +3,8 @@
 require('dotenv').config();
 
 const config = {
-    option: "metadata"
-    }
+    method: "transformSurveyQuestion",
+    option: "answers"
+}
 
 export default config;
