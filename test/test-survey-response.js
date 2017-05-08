@@ -2,13 +2,11 @@ import { assert } from 'chai';
 import _ from 'highland';
 import fs from 'fs';
 import config from '../test/test-config.js';
-import transformSurveyQuestion from '../lib/transforms/transformSurveyQuestion.js';
-import transformSurveyResponse from '../lib/transforms/transformSurveyResponse.js';
+import transformSurveyResponse from '../lib/transforms/transformsurveyresponse.js';
 
 const surveyResponsePath = 'test/fixtures/test-data.json';
-const surveyQuestionPath = 'test/fixtures/survey-question.json';
 
-describe('SurveygizmoTransform', function() {
+describe('transformSurveyResponse', function() {
 
     let inStream;
 
@@ -17,7 +15,7 @@ describe('SurveygizmoTransform', function() {
         done();
     });
 
-    it('should transform survey question responses', (done) => {
+    it('should transform survey responses', (done) => {
         const allData = transformSurveyResponse(inStream, config);
         allData.on('data', (chunk) => {
 
