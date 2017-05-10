@@ -30,13 +30,11 @@ describe('transformSurveyResponse', function() {
     it('should not have numbers, hyphens, or underscores to begin title', (done) => {
         const allData = transformSurveyResponse(inStream, metadataConfig);
         allData.each((outData) => {
-            inStream.observe().each((inData) => {
-                const outTitle = outData[0].survey_title;
-                assert(isNaN(outTitle.charAt(0)), 'title should not begin with a title');
-                assert(outTitle.charAt(0) !== ' ', 'title should not begin with a space');
-                assert(outTitle.charAt(0) !== '-', 'title should not begin with a hyphen');
-                assert(outTitle.charAt(0) !== '_', 'title should not begin with an underscore');
-            });
+            const outTitle = outData[0].survey_title;
+            assert(isNaN(outTitle.charAt(0)), 'title should not begin with a title');
+            assert(outTitle.charAt(0) !== ' ', 'title should not begin with a space');
+            assert(outTitle.charAt(0) !== '-', 'title should not begin with a hyphen');
+            assert(outTitle.charAt(0) !== '_', 'title should not begin with an underscore');
         });
         allData.on('end', done);
     });
