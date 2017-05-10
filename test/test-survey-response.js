@@ -17,8 +17,11 @@ describe('transformSurveyResponse', function() {
 
     it('should transform survey responses', (done) => {
         const allData = transformSurveyResponse(inStream, config);
-        allData.on('data', (chunk) => {
 
+        allData.each((outData) => {
+            inStream.observe().each((inData) => {
+                assert.equal(outData.length, inData.data.length, 'should have the same number of incoming and outgoing responses');
+            });
         });
         allData.on('end', done);
     });

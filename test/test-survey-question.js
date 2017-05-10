@@ -17,8 +17,11 @@ describe('transformSurveyQuestion', function() {
 
     it('should transform survey question responses', (done) => {
         const allData = transformSurveyQuestion(inStream, config);
-        allData.on('data', (questions) => {
-            assert.equal(questions.length, 53, 'should have same number of questions');
+
+        allData.each((outData) => {
+            inStream.observe().each((inData) => {
+                assert.equal(outData.length, inData.data.length, 'should have the same amount of incoming data as outgoing data');
+            });
         });
         allData.on('end', done);
     });
