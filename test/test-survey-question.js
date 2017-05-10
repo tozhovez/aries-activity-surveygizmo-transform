@@ -15,7 +15,7 @@ describe('transformSurveyQuestion', function() {
         done();
     });
 
-    it('should transform survey question responses', (done) => {
+    it('should transform survey questions', (done) => {
         const allData = transformSurveyQuestion(inStream, config);
 
         allData.each((outData) => {
