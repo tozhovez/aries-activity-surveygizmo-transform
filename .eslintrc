@@ -1,8 +1,10 @@
 {
     "extends": "airbnb",
-    "plugins": ["babel"],
-    "parser": "babel-eslint",
-    "rules": {
-      "indent": ["error", 4]
-    }
+        "plugins": ["babel"],
+        "parser": "babel-eslint",
+        "rules": {
+            "indent": ["error", 4], 
+            "class-methods-use-this":["error", { "exceptMethods": ["onTask"] }],
+            "arrow-body-style": ["error", "as-needed", "requireReturnForObjectLiteral": true], 
+        }
 }

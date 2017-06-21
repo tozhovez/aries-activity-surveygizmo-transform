@@ -4,7 +4,7 @@ require('dotenv').config();
 
 const config = {
     method: "transformSurveyQuestion",
-    option: "answers"
+    option: "questions"
 }
 
 export default config;

@@ -17,12 +17,8 @@ describe('transformSurveyQuestion', function() {
 
     it('should transform survey questions', (done) => {
         const allData = transformSurveyQuestion(inStream, config);
-
-        allData.each((outData) => {
-            inStream.observe().each((inData) => {
-                console.log(outData);
-            });
-        });
+        const ws = fs.createWriteStream('question-output.txt');
+        allData.pipe(ws);
         allData.on('end', done);
     });
 });
