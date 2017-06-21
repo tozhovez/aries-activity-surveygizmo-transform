@@ -9,7 +9,6 @@
     "test-watch": "mocha -w --require babel-polyfill --compilers js:babel-register",
     "lint": "eslint lib",
     "build-image": "docker build --no-cache -t astronomerio/surveygizmo-transform .",
-    "docker-coverage": "docker run --entrypoint npm astronomerio/surveygizmo-transform run coverage",
     "docker-lint": "docker run --entrypoint npm astronomerio/surveygizmo-transform run lint",
     "tail": "tail -f app.log | bunyan -o short"
   },
