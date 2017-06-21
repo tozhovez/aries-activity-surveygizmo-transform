@@ -7,7 +7,6 @@
   "scripts": {
     "test": "mocha --timeout 2000000 --require babel-polyfill --compilers js:babel-register",
     "test-watch": "mocha -w --require babel-polyfill --compilers js:babel-register",
-    "coverage": "babel-node ./node_modules/.bin/isparta cover _mocha",
     "lint": "eslint lib",
     "build-image": "docker build --no-cache -t astronomerio/surveygizmo-transform .",
     "docker-coverage": "docker run --entrypoint npm astronomerio/surveygizmo-transform run coverage",
