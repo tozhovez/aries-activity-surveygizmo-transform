@@ -12,7 +12,6 @@ dependencies:
 test:
   override: 
     - docker run --entrypoint npm $IMAGE_NAME run lint
-    - docker run --entrypoint npm $IMAGE_NAME run coverage
   post:
     - mkdir $CIRCLE_ARTIFACTS/coverage
     # get the name of the container and copy the coverage directory into $CIRCLE_ARTIFACTS
