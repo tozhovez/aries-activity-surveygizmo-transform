@@ -1,3 +1,4 @@
+
 # Configuration
 There are two configuration properties for this activity: `method` and `option`. Each method has an option that
 tells the activity how to manipulate the data that is passed into it.
@@ -159,3 +160,7 @@ This method will transform the following response.
 `questions` - This option will transform the response by stripping the data of only question information.
 
 `answers` - This option will transform the response by stripping the data of only possible answer values.
+
+![alt text](/img/logo.png "Aries Inegration for Survey Gizmo")
+
+[![CircleCI](https://circleci.com/gh/aries-data/aries-activity-surveygizmo-transform.svg?style=svg)](https://circleci.com/gh/aries-data/aries-activity-surveygizmo-transform)
