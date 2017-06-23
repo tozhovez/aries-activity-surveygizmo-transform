@@ -12,11 +12,9 @@ dependencies:
 test:
   override: 
     - docker run --entrypoint npm $IMAGE_NAME run lint
-    - docker run --entrypoint npm $IMAGE_NAME run coverage
   post:
     - mkdir $CIRCLE_ARTIFACTS/coverage
     # get the name of the container and copy the coverage directory into $CIRCLE_ARTIFACTS
-    - docker cp $(docker ps -l --format "{{.Names}}"):/usr/local/src/coverage $CIRCLE_ARTIFACTS
 
 deployment:
   # git tags get deployed to docker hub with the latest tag

@@ -5,12 +5,11 @@
   "repository": "https://github.com/aries-data/aries-activity-surveygizmo-transform",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha --require babel-polyfill --compilers js:babel-register",
+    "test": "mocha --timeout 2000000 --require babel-polyfill --compilers js:babel-register",
     "test-watch": "mocha -w --require babel-polyfill --compilers js:babel-register",
     "coverage": "babel-node ./node_modules/.bin/isparta cover _mocha",
     "lint": "eslint lib",
     "build-image": "docker build --no-cache -t astronomerio/surveygizmo-transform .",
-    "docker-coverage": "docker run --entrypoint npm astronomerio/surveygizmo-transform run coverage",
     "docker-lint": "docker run --entrypoint npm astronomerio/surveygizmo-transform run lint",
     "tail": "tail -f app.log | bunyan -o short"
   },
@@ -36,6 +35,13 @@
     "nock": "^7.0.2"
   },
   "dependencies": {
-    "aries-data": "aries-data/aries-data"
+    "aries-data": "^2.1.1",
+    "fs": "0.0.1-security",
+    "highland": "^2.10.1",
+    "lodash.get": "^4.4.2",
+    "lodash.isfunction": "^3.0.8",
+    "lodash.omit": "^4.5.0",
+    "through2-map": "^3.0.0",
+    "utf8": "^2.1.2"
   }
 }
