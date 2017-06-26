@@ -30,4 +30,4 @@ deployment:
     commands:
       - docker tag $IMAGE_NAME:latest $IMAGE_NAME:master
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-      - docker push $IMAGE_NAME:master
+      - docker push $IMAGE_NAME:latest
